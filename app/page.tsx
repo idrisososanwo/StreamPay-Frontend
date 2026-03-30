@@ -1,20 +1,11 @@
 export default function Home() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "2rem",
-      }}
-    >
-      <h1 style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>StreamPay</h1>
-      <p style={{ color: "var(--muted)", marginBottom: "1.5rem" }}>
+    <main className="min-h-screen flex flex-col items-center justify-center p-8">
+      <h1 className="text-3xl font-bold mb-2">StreamPay</h1>
+      <p className="text-muted mb-6 text-base">
         Payment streaming on Stellar
       </p>
-      <p style={{ maxWidth: "32ch", textAlign: "center" }}>
+      <p className="max-w-xs text-center text-base">
         Connect your wallet to create and manage payment streams.
       </p>
     </main>
