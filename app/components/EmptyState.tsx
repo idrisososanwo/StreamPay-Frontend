@@ -1,21 +1,39 @@
-type EmptyStateProps = {
-  eyebrow: string;
+import { ReactNode } from "react";
+
+export type EmptyStateProps = {
+  eyebrow?: string;
   title: string;
   description: string;
-  actionLabel: string;
+  actionLabel?: string;
+  primaryAction?: ReactNode;
+  secondaryAction?: ReactNode;
+  children?: ReactNode;
 };
 
-export function EmptyState({ eyebrow, title, description, actionLabel }: EmptyStateProps) {
+export function EmptyState({
+  eyebrow,
+  title,
+  description,
+  actionLabel,
+  primaryAction,
+  secondaryAction,
+  children,
+}: EmptyStateProps) {
   return (
     <section className="empty-state" aria-labelledby="empty-state-title">
-      <p className="empty-state__eyebrow">{eyebrow}</p>
+      {eyebrow && <p className="empty-state__eyebrow">{eyebrow}</p>}
       <h2 className="empty-state__title" id="empty-state-title">
         {title}
       </h2>
       <p className="empty-state__description">{description}</p>
-      <button className="button button--primary" type="button">
-        {actionLabel}
-      </button>
+      {children}
+      {primaryAction}
+      {actionLabel && !primaryAction && (
+        <button className="button button--primary" type="button">
+          {actionLabel}
+        </button>
+      )}
+      {secondaryAction}
     </section>
   );
 }
