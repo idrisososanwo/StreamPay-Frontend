@@ -1,4 +1,5 @@
-import { EmptyState } from '../components/EmptyState'
+import { EmptyState } from '../components/EmptyState';
+import Link from 'next/link';
 
 export default function ActivityPage() {
   return (
@@ -32,7 +33,7 @@ export default function ActivityPage() {
           </a>
         }
         secondaryAction={
-          <a
+          <Link
             href="/"
             style={{
               display: "inline-flex",
@@ -45,7 +46,7 @@ export default function ActivityPage() {
             }}
           >
             Home dashboard
-          </a>
+          </Link>
         }
       >
         Keep your wallet connected to see live stream and payment activity in one place.
