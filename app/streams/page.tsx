@@ -86,7 +86,7 @@ function StreamListSkeleton() {
   );
 }
 
-export function StreamsPageContent({
+function StreamsPageContent({
   state = "populated",
   streams = mockStreams,
 }: StreamsPageContentProps) {
