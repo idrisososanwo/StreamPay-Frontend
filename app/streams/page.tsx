@@ -18,7 +18,7 @@ const streamListCopy = {
   primaryCta: "Create Stream",
 } as const;
 
-export const mockStreams: StreamRowData[] = [
+const mockStreams: StreamRowData[] = [
   {
     id: "stream-ada",
     nextAction: "Pause",
