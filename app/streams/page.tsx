@@ -1,7 +1,7 @@
 import { EmptyState } from "../components/EmptyState";
 import { StreamRow, type StreamRowData } from "../components/StreamRow";
 
-export type StreamsViewState = "empty" | "loading" | "populated";
+type StreamsViewState = "empty" | "loading" | "populated";
 
 const streamListCopy = {
   description:
@@ -86,7 +86,7 @@ function StreamListSkeleton() {
   );
 }
 
-export function StreamsPageContent({
+function StreamsPageContent({
   state = "populated",
   streams = mockStreams,
 }: StreamsPageContentProps) {
